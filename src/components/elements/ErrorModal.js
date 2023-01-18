@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Modal from './Modal';
-import Button from './Button';
+import Modal from "./Modal";
+import Button from "./Button";
 
-const ErrorModal = props => {
+const ErrorModal = (props) => {
   return (
     <Modal
       onCancel={props.onClear}

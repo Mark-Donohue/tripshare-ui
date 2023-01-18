@@ -1,77 +1,76 @@
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 1rem;
+}
+
+.nav-links a {
+  border: 1px solid transparent;
+  color: #094067;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+  background: #3da9fc;
+  border-color: #fffffe;
+  color: #fffffe;
+}
+
+.nav-links button {
+  cursor: pointer;
+  border: 1px solid #094067;
+  color: #094067;
+  background: transparent;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+.nav-links button:focus {
+  outline: none;
+}
+
+.nav-links button:hover,
+.nav-links button:active {
+  background: #094067;
+  color: #fffffe;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    flex-direction: row;
   }
-  
+
   .nav-links li {
-    margin: 1rem;
+    margin: 0 0.5rem;
   }
-  
+
   .nav-links a {
-    border: 1px solid transparent;
-    color: #094067;
-    text-decoration: none;
-    padding: 0.5rem;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a:active,
-  .nav-links a.active {
-    background: #3da9fc;
-    border-color: #fffffe;
     color: #fffffe;
+    text-decoration: none;
   }
-  
+
   .nav-links button {
-    cursor: pointer;
-    border: 1px solid #094067;
-    color: #094067;
+    border: 1px solid #fffffe;
+    color: #fffffe;
     background: transparent;
-    padding: 0.5rem;
-    font: inherit;
   }
-  
-  .nav-links button:focus {
-    outline: none;
-  }
-  
+
   .nav-links button:hover,
   .nav-links button:active {
-    background: #094067;
-    color: #fffffe;
+    background: #3da9fc;
+    color: #094067;
   }
-  
-  @media (min-width: 768px) {
-    .nav-links {
-      flex-direction: row;
-    }
-  
-    .nav-links li {
-      margin: 0 0.5rem;
-    }
-  
-    .nav-links a {
-      color: #fffffe;
-      text-decoration: none;
-    }
-  
-    .nav-links button {
-      border: 1px solid #fffffe;
-      color: #fffffe;
-      background: transparent;
-    }
-    
-    .nav-links button:hover,
-    .nav-links button:active {
-      background: #3da9fc;
-      color: #094067;
-    }
-  }
-  
+}
