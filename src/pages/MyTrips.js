@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 import ErrorModal from "../components/elements/ErrorModal";
 import LoadingSpinner from "../components/elements/LoadingSpinner";
 import TripList from "../components/trips/TripList";
-import { useHttpClient } from "../hooks/http";
+import { useHttpClient } from "../hooks/http-hook";
 
-function Trips() {
+function MyTrips() {
   const [tripData, setTripData] = useState();
   const { isLoading, error, sendRequest, clearErrorHander } = useHttpClient();
   const userId = useParams().userId;
@@ -46,4 +46,4 @@ function Trips() {
   );
 }
 
-export default Trips;
+export default MyTrips;

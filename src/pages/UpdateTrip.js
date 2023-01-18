@@ -7,10 +7,10 @@ import ErrorModal from "../components/elements/ErrorModal";
 import Input from "../components/elements/Input";
 import LoadingSpinner from "../components/elements/LoadingSpinner";
 import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH } from "../util/validators";
-import { useForm } from "../hooks/form";
-import { useHttpClient } from "../hooks/http";
+import { useForm } from "../hooks/form-hook";
+import { useHttpClient } from "../hooks/http-hook";
 import { AuthContext } from "../context/auth-context";
-import "./TripForm.css";
+import "./styles/TripForm.css";
 
 function UpdateTrip() {
   const { isLoading, error, sendRequest, clearErrorHander } = useHttpClient();
@@ -73,7 +73,7 @@ function UpdateTrip() {
         }),
         {
           "Content-Type": "application/json",
-          "Authorization": "Bearer " + auth.token
+          Authorization: "Bearer " + auth.token,
         }
       );
 

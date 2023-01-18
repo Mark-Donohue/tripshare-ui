@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import ErrorModal from "../components/elements/ErrorModal";
 import LoadingSpinner from "../components/elements/LoadingSpinner";
 import UserList from "../components/users/UserList";
-import { useHttpClient } from "../hooks/http";
+import { useHttpClient } from "../hooks/http-hook";
 
-function Users() {
+function AllUsers() {
   const { isLoading, error, sendRequest, clearErrorHander } = useHttpClient();
   const [userData, setUserData] = useState();
 
@@ -37,4 +37,4 @@ function Users() {
   );
 }
 
-export default Users;
+export default AllUsers;

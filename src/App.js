@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import AllUsers from "./pages/AllUsers";
 import Auth from "./pages/Auth";
 import MainNavigation from "./components/navigation/MainNavigation";
+import MyTrips from "./pages/MyTrips";
 import NewTrip from "./pages/NewTrip";
-import Trips from "./pages/Trips";
 import UpdateTrip from "./pages/UpdateTrip";
-import Users from "./pages/Users";
 import { AuthContext } from "./context/auth-context";
 import { useAuth } from "./hooks/auth-hook";
 
@@ -17,8 +17,8 @@ function App() {
   if (token) {
     routes = (
       <React.Fragment>
-        <Route path="/" element={<Users />} />
-        <Route path="/:userId/trips" element={<Trips />} />
+        <Route path="/" element={<AllUsers />} />
+        <Route path="/:userId/trips" element={<MyTrips />} />
         <Route path="/trips/new" element={<NewTrip />} />
         <Route path="/trips/:tripId" element={<UpdateTrip />} />
         <Route path="*" element={<Navigate to="/" />} />
@@ -27,8 +27,8 @@ function App() {
   } else {
     routes = (
       <React.Fragment>
-        <Route path="/" element={<Users />} />
-        <Route path="/:userId/trips" element={<Trips />} />
+        <Route path="/" element={<AllUsers />} />
+        <Route path="/:userId/trips" element={<MyTrips />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="*" element={<Navigate to="/auth" />} />
       </React.Fragment>

@@ -12,10 +12,10 @@ import {
   VALIDATOR_EMAIL,
   VALIDATOR_REQUIRE,
 } from "../util/validators";
-import { useForm } from "../hooks/form";
-import { useHttpClient } from "../hooks/http";
+import { useForm } from "../hooks/form-hook";
+import { useHttpClient } from "../hooks/http-hook";
 import { AuthContext } from "../context/auth-context";
-import "./Auth.css";
+import "./styles/Auth.css";
 
 function Auth() {
   const auth = useContext(AuthContext);
@@ -122,7 +122,12 @@ function Auth() {
         <hr />
         <form onSubmit={submitHandler}>
           {!isSignInMode && (
-            <ImageUpload center id="image" onInput={inputHandler} errorText="Please provide a picture of yourself!"/>
+            <ImageUpload
+              center
+              id="image"
+              onInput={inputHandler}
+              errorText="Please provide a picture of yourself!"
+            />
           )}
           {!isSignInMode && (
             <React.Fragment>

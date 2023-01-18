@@ -8,7 +8,7 @@ import LoadingSpinner from "../elements/LoadingSpinner";
 import Map from "../elements/Map";
 import Modal from "../elements/Modal";
 import { AuthContext } from "../../context/auth-context";
-import { useHttpClient } from "../../hooks/http";
+import { useHttpClient } from "../../hooks/http-hook";
 import "./TripItem.css";
 
 function TripItem(props) {

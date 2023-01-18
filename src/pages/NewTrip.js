@@ -7,10 +7,10 @@ import ImageUpload from "../components/elements/ImageUpload";
 import Input from "../components/elements/Input";
 import LoadingSpinner from "../components/elements/LoadingSpinner";
 import { VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE } from "../util/validators";
-import { useForm } from "../hooks/form";
-import { useHttpClient } from "../hooks/http";
+import { useForm } from "../hooks/form-hook";
+import { useHttpClient } from "../hooks/http-hook";
 import { AuthContext } from "../context/auth-context";
-import "./TripForm.css";
+import "./styles/TripForm.css";
 
 function NewTrip() {
   const auth = useContext(AuthContext);
@@ -48,9 +48,14 @@ function NewTrip() {
       formData.append("address", formState.inputs.address.value);
       formData.append("image", formState.inputs.image.value);
 
-      await sendRequest(`${process.env.REACT_APP_API_URL}/trips`, "POST", formData, {
-        "Authorization": "Bearer " + auth.token,
-      });
+      await sendRequest(
+        `${process.env.REACT_APP_API_URL}/trips`,
+        "POST",
+        formData,
+        {
+          Authorization: "Bearer " + auth.token,
+        }
+      );
       navigate("/");
     } catch (err) {
       console.log("An error occurred.");
