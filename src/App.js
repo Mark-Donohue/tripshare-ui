@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import AllUsers from "./pages/AllUsers";
 import Auth from "./pages/Auth";
+import LoadingSpinner from "./components/elements/LoadingSpinner";
 import MainNavigation from "./components/navigation/MainNavigation";
-import MyTrips from "./pages/MyTrips";
-import NewTrip from "./pages/NewTrip";
-import UpdateTrip from "./pages/UpdateTrip";
 import { AuthContext } from "./context/auth-context";
 import { useAuth } from "./hooks/auth-hook";
+
+// Declare certain routes lazily that are not immediately required
+const MyTrips = React.lazy(() => import("./pages/MyTrips"));
+const NewTrip = React.lazy(() => import("./pages/NewTrip"));
+const UpdateTrip = React.lazy(() => import("./pages/UpdateTrip"));
 
 function App() {
   const { userId, token, signIn, signOut } = useAuth();
@@ -48,7 +51,15 @@ function App() {
       <BrowserRouter>
         <MainNavigation />
         <main>
-          <Routes>{routes}</Routes>
+          <Suspense
+            fallback={
+              <div className="center">
+                <LoadingSpinner />
+              </div>
+            }
+          >
+            <Routes>{routes}</Routes>
+          </Suspense>
         </main>
       </BrowserRouter>
     </AuthContext.Provider>
