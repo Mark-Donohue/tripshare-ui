@@ -23,7 +23,7 @@ function UserList(props) {
             key={user.id}
             id={user.id}
             name={user.firstName}
-            image={user.image}
+            image={user.imageUrl}
             tripCount={user.trips.length}
           />
         );
