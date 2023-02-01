@@ -23,7 +23,7 @@ function TripList(props) {
         <TripItem
           key={trip.id}
           id={trip.id}
-          image={trip.image}
+          image={trip.imageUrl}
           title={trip.title}
           description={trip.description}
           address={trip.address}
