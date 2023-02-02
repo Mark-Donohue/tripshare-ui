@@ -21,7 +21,6 @@ In order for the UI to function properly, the following environment variables mu
 | ------------------------ | ------------------------------------------------------------------------ |
 | REACT_APP_GOOGLE_API_KEY | Key that authenticates and allows access to Google Maps API.             |
 | REACT_APP_API_URL        | The full URL, including port number, where the API is running.           |
-| REACT_APP_ASSET_URL      | The full URL, including port number, where files and uploads are stored. |
 
 ## Acknowledgment
 
