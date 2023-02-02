@@ -88,10 +88,7 @@ function TripItem(props) {
         <Card className="trip-item__content">
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="trip-item__image">
-            <img
-              src={props.image}
-              alt={props.title}
-            />
+            <img src={props.image} alt={props.title} />
           </div>
           <div className="trip-item__info">
             <h2>{props.title}</h2>
