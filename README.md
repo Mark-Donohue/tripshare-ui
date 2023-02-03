@@ -1,6 +1,6 @@
 # TripShare UI
 
-This is the front-end UI application for TripShare. It is written using [React](https://reactjs.org/).
+This is the front-end UI application for TripShare. It is written using [React](https://reactjs.org/). To view the production instance of TripShare, please vist https://tripshare-ui.web.app/.
 
 ## Running Locally
 
@@ -17,10 +17,10 @@ TripShare UI is dependent on [TripShare API](https://github.com/Mark-Donohue/tri
 
 In order for the UI to function properly, the following environment variables must be set within a `.env` file placed within the root directory of the project.
 
-| Variable                 | Decsription                                                              |
-| ------------------------ | ------------------------------------------------------------------------ |
-| REACT_APP_GOOGLE_API_KEY | Key that authenticates and allows access to Google Maps API.             |
-| REACT_APP_API_URL        | The full URL, including port number, where the API is running.           |
+| Variable                 | Decsription                                                    |
+| ------------------------ | -------------------------------------------------------------- |
+| REACT_APP_GOOGLE_API_KEY | Key that authenticates and allows access to Google Maps API.   |
+| REACT_APP_API_URL        | The full URL, including port number, where the API is running. |
 
 ## Acknowledgment
 

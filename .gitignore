@@ -4,3 +4,4 @@
 .env.production
 .firebaserc
 .firebase/
+.DS_Store
