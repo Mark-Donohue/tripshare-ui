@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CgMenuRound } from "react-icons/cg";
+import { IoMenuSharp } from "react-icons/io5";
 
 import MainHeader from "./MainHeader";
 import NavLinks from "./NavLinks";
@@ -33,7 +33,7 @@ function MainNavigation(props) {
           className="main-navigation__menu-btn"
           onClick={openDrawerHandler}
         >
-          <CgMenuRound size="75" color="white" title="Side Menu" />
+          <IoMenuSharp size="50" color="white" title="Side Menu" />
         </button>
         <h1 className="main-navigation__title">
           <Link to="/">TripShare</Link>

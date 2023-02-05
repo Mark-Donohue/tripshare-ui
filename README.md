@@ -1,6 +1,6 @@
 # TripShare UI
 
-This is the front-end UI application for TripShare. It is written using [React](https://reactjs.org/). To view the production instance of TripShare, please vist https://tripshare-ui.web.app/.
+This is the front-end UI application for TripShare. It is written using [React](https://reactjs.org/). To view the production instance of TripShare, please vist https://tripshare.dev.
 
 ## Running Locally
 
