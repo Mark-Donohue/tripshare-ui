@@ -17,7 +17,9 @@ function AllUsers() {
         );
         setUserData(responseData);
       } catch (err) {
-        console.log("An error occurred.");
+        console.log(
+          `An error occured. Unable to fetch users from URI: ${process.env.REACT_APP_API_URL}`
+        );
       }
     }
 
